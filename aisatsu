@@ -1,0 +1,31 @@
+//-----------------------------------------------------------
+// 機能名　：あいさつ文出力.gs
+// 機能概要：挨拶する
+// 作成日　：2025.07.19
+// 作成者　：
+//-----------------------------------------------------------
+function aisatsuOutput() {
+    const aisatsu1 = "こんにちは";              // 固定値：挨拶
+    const aisatsu2 = ['おはようございます', 'こんにちは', 'こんばんは'];    // 配列：挨拶
+
+    const now = new Date();
+    var hour = now.getHours(); // 0〜23の値
+
+    //hour = 7;
+    if (hour >= 6 && hour <= 9) {
+
+      Logger.log(aisatsu2[0]);
+
+    } else if (hour >= 10 && hour <= 17){
+
+      Logger.log(aisatsu2[1]);
+
+    } else {
+      Logger.log(aisatsu2[2]);
+    }
+
+
+  // for (var i = 0; i < aisatsu2.length; i++) {
+  //       Logger.log(aisatsu2[i]);
+  //   }
+}
